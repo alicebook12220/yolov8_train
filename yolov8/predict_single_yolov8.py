@@ -6,7 +6,7 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 if __name__ == '__main__':
     # Load a model
-    model = YOLO("runs/detect/train2/weights/best.pt")  # load a pretrained model (recommended for training)
+    model = YOLO("runs/detect/train/weights/best.pt")  # load a pretrained model (recommended for training)
 
     img = cv2.imread("bus.jpg")
     results = model(img, save=False, verbose=False)  # predict on an image, save=False:不儲存bbox照片, verbose=False:不顯示預測過程
