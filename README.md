@@ -2,6 +2,7 @@
 
 ## 訓練步驟
 ### 1.安裝 ultralytics
+環境需求: Python>=3.7 PyTorch>=1.7.
 ```
 pip install ultralytics
 ```
