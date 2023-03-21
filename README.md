@@ -6,3 +6,15 @@
 ```
 pip install ultralytics
 ```
+### 2.準備資料集
+資料集結構
+```
+└── datasets
+    └── coco128  ← 資料集名稱
+        ├── images ← 存放影像
+            ├── train
+            └── val
+        └── labels ← 存放標記檔
+            ├── train
+            └── val
+```
