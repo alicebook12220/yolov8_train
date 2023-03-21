@@ -28,10 +28,8 @@ pip install ultralytics
 cd yolov8
 python train.py
 ```
-可調整參數
+model.train(data="coco128.yaml", epochs=500, batch=32, workers=4)可用參數
 ```
-model.train(data="coco128.yaml", epochs=500, batch=32, workers=4)  # train the model
-
 model:  # path to model file, i.e. yolov8n.pt, yolov8n.yaml
 data:  # path to data file, i.e. coco128.yaml
 epochs: 100  # number of epochs to train for
