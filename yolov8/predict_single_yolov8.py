@@ -8,16 +8,11 @@ if __name__ == '__main__':
     # Load a model
     model = YOLO("runs/detect/train2/weights/best.pt")  # load a pretrained model (recommended for training)
 
-    #metrics = model.val()  # evaluate model performance on the validation set
-    #img = cv2.imread("D:/harrylin/smart_image/datasets/Scratch/AAMORA00.B160UAN03_ET.B16UAN3_P4_ASI1229.5Q2A86N600.5Q2A86N63.202.b.1662857460.jpg")
     img = cv2.imread("bus.jpg")
-    #img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    results = model(img, save=False)  # predict on an image
-    print(results)
+    results = model(img, save=False, verbose=False)  # predict on an image, save=False:不儲存bbox照片, verbose=False:不顯示預測過程
+
     for result in results:
         boxes = result.boxes  # Boxes object for bbox outputs
-        #masks = result.masks  # Masks object for segmenation masks outputs
-        #probs = result.probs  # Class probabilities for classification outputs
         boxes = boxes.cpu().numpy()
         if not boxes:
             break #沒東西就跳過
@@ -27,8 +22,8 @@ if __name__ == '__main__':
             y_top = int(box_data[0][1])
             x_right = int(box_data[0][2])
             y_bottom = int(box_data[0][3])
-            conf = box_data[0][4]
-            classes = int(box_data[0][5])
+            conf = box_data[0][4] #信心度
+            classes = int(box_data[0][5]) #類別id
             boundingBox = [
 				(x_left, y_top), #左上頂點
 				(x_left, y_bottom), #左下頂點
@@ -44,4 +39,4 @@ if __name__ == '__main__':
             # 在影像中標出Box邊界和類別、信心度
             cv2.rectangle(img, boundingBox[0], boundingBox[2], rectColor, 2)
             cv2.putText(img, pstring, textCoord, cv2.FONT_HERSHEY_DUPLEX, 1, rectColor, 2)
-        cv2.imwrite("predict/test.jpg", img)
+        cv2.imwrite("inference.jpg", img)
