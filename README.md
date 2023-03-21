@@ -23,6 +23,7 @@ pip install ultralytics
 請參考yolov8/coco128.yaml
 ```
 ### 4.開始訓練
+請參考yolov8/train.yaml
 ```
 cd yolov8
 python train.py
