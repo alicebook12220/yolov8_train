@@ -27,3 +27,9 @@ pip install ultralytics
 cd yolov8
 python train.py
 ```
+## Inference
+請參考yolov8/predict_single_yolov8.py
+```
+cd yolov8
+python predict_single_yolov8.py
+```
