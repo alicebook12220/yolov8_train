@@ -2,4 +2,6 @@
 
 訓練步驟
 安裝 ultralytics
+```
 pip install ultralytics
+```
