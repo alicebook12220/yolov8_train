@@ -1,5 +1,5 @@
 # yolov8_train
-* Colab Demo: [<a href="https://colab.research.google.com/drive/1yR2ClVuMefisH12d_srXMhHnHwwA1YmU?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/drive/1yR2ClVuMefisH12d_srXMhHnHwwA1YmU?usp=sharing)
+* Colab Demo: [<a href="https://colab.research.google.com/drive/1Zu2fnRvUE3VUj56BC3RwrEb86jUomWmm?usp=share_link"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>](https://colab.research.google.com/drive/1Zu2fnRvUE3VUj56BC3RwrEb86jUomWmm?usp=share_link)
 ## 訓練步驟
 ### 1.安裝 ultralytics
 前置環境: Python>=3.7 和 PyTorch>=1.7
